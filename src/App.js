@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import React from "react";
+import CustomButton from "./components/CustomButton/CustomButton";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6} md={3}>
+        <CustomButton content={"Button1"} />
+      </Grid>
+      {/* This is a button*/}
+      <Grid item xs={12} sm={6} md={3}>
+        <CustomButton content={"Button2"} />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <CustomButton content={"Button3"} />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <CustomButton content={"Button4"} />
+      </Grid>
+    </Grid>
   );
 }
 
